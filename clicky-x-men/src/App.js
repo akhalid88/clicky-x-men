@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Wrapper from "./components/wrapper/wrapper";
+import Navbar from "./components/navbar/navbar";
+import Jumbotron from "./components/jumbotron/jumbotron";
 // import Cards from "./components/cards/cards";
 import Footer from "./components/footer/footer";
-// import Jumbotron from "./components/jumbotron/jumbotron";
-// import Navbar from "./components/navbar/navbar";
 // import xmen from "./xmen.json";
 
 class App extends Component {
@@ -16,8 +16,8 @@ class App extends Component {
 	render() {
 		return (
 			<Wrapper>
-				{/* <Navbar></Navbar> */}
-				{/* <Jumbotron></Jumbotron> */}
+				<Navbar></Navbar>
+				<Jumbotron></Jumbotron>
 				{/* Card Logic */}
 				<Footer></Footer>
 			</Wrapper>

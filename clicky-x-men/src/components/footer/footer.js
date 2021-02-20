@@ -5,7 +5,7 @@ function Footer() {
 	return (
 		<footer class="footer">
 			<div class="bottom">
-				"Clicky X-men! "
+				Clicky X-men! 
 				{/* <img alt="react" src="public/"></img> */}
 			</div>
 		</footer>
