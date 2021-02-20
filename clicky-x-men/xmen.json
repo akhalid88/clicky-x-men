@@ -1,6 +1,67 @@
 [
 	{
 		"id": 1,
-		"name": "Cyclops"
-	}
+		"name": "Cyclops",
+		"image": "placeholder"
+	},
+	{
+    "id": 2,
+    "name": "Jean Grey",
+    "image": "placeholder"
+  },
+	{
+    "id": 3,
+    "name": "Beast",
+    "image": "placeholder"
+  },
+	{
+    "id": 4,
+    "name": "Iceman",
+    "image": "placeholder"
+  },
+	{
+    "id": 5,
+    "name": "Angel",
+    "image": "placeholder"
+  },
+	{
+    "id": 6,
+    "name": "Storm",
+    "image": "placeholder"
+  },
+	{
+    "id": 7,
+    "name": "Wolverine",
+    "image": "placeholder"
+  },
+	{
+    "id": 8,
+    "name": "Nightcrawler",
+    "image": "placeholder"
+  },
+	{
+    "id": 9,
+    "name": "Colossus",
+    "image": "placeholder"
+  },
+	{
+    "id": 10,
+    "name": "Rogue",
+    "image": "placeholder"
+  },
+	{
+    "id": 11,
+    "name": "Gambit",
+    "image": "placeholder"
+  },
+	{
+    "id": 12,
+    "name": "Shadowcat",
+    "image": "placeholder"
+  },
+	{
+    "id": 13,
+    "name": "Jubilee",
+    "image": "placeholder"
+  }
 ]
