@@ -4,7 +4,7 @@ import "./cards.css";
 function Card(props) {
 	return (
 		<div className="card click-item" onClick={() => props.selectCard(props.id)}>
-			<img src={props.image} />
+			<img className="imgCard" src={props.image} />
 		</div>
 	)
 }

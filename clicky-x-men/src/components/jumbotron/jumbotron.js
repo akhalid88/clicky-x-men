@@ -4,8 +4,8 @@ import "./jumbotron.css";
 function Jumbotron() {
 	return (
 		<header className="header">
-			<h1>Clicky X-Men</h1>
-			<h2>Click on an image to initiate the mutation process and earn points, but don't click on a image more than once, or else...</h2>
+			<h1 className="title">Clicky X-Men</h1>
+			<h2 className="instructions">Click on an image to initiate the mutation process and earn points, but don't click on a image more than once, or else...</h2>
 		</header>
 	)
 }
