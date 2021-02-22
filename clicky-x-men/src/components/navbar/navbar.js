@@ -5,18 +5,19 @@ function Navbar() {
 	return (
 		<nav className="navbar sticky-top">
 
-			{/* <div className="container-fluid">
+			{/* LIST */}
+			<div className="container-fluid">
 				<ul className="navbar-nav">
 					<li>
 						<a href="/">Clicky X-Men</a>
 					</li>
 					<li>Click an image to begin!</li>
-					<li className="score">Score: 0 | Top Score: 0</li>
+					<li className="score">Score: <span className="currentScore">0</span> | Top Score: <span className="topScore">0</span></li>
 				</ul>
-			</div> */}
+			</div>
 
-			{/* DIVS */}
-			<div className="container-fluid">
+			{/* DIV */}
+			{/* <div className="container-fluid">
 				<div className="navbar-nav">
 					<div>
 						<a className="navItem" href="/">Clicky X-Men</a>
@@ -24,7 +25,7 @@ function Navbar() {
 					<div className="navItem">Click an image to begin the mutation process!</div>
 					<div className="navItem"> Score: 0 | Top Score: 0</div>
 				</div>
-			</div>
+			</div> */}
 
 		</nav>
 	)

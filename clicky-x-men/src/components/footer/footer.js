@@ -3,8 +3,8 @@ import "./footer.css";
 
 function Footer() {
 	return (
-		<footer class="footer">
-			<div class="bottom">
+		<footer className="footer">
+			<div className="bottom">
 				Clicky X-men! 
 				{/* <img alt="react" src="public/"></img> */}
 			</div>
