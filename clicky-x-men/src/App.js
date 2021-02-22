@@ -17,8 +17,10 @@ class App extends Component {
 
 	// variables and functions
 	shuffleCards = () => {
-		this.state.playDeck = this.state.xmen.sort(() => Math.random() - 0.5);
-		console.log(this.state.playDeck);
+
+		const xmen = this.state.xmen.sort(() => Math.random() - 0.5);
+		this.setState({ xmen: xmen });
+		// console.log(this.state.playDeck);
 	}
 
 	selectCard = id => {
@@ -27,13 +29,13 @@ class App extends Component {
 
 	//render
 	render() {
-		this.shuffleCards();
+		// this.shuffleCards();
 		return (
 			<Wrapper>
 				<Navbar></Navbar>
 				<Jumbotron></Jumbotron>
 				<div className="container">
-					{this.state.playDeck.map(mutant => (
+					{this.state.xmen.map(mutant => (
 						<Card
 							shuffleCards={this.shuffleCards}
 							id={mutant.id}
