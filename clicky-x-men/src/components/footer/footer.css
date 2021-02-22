@@ -8,10 +8,6 @@
 	display: block;
 }
 
-article, aside, footer, header, nav, section {
-	display: block;
-}
-
 .footer>.bottom {
 	/* position: absolute; */
 	bottom: 0;
@@ -20,15 +16,4 @@ article, aside, footer, header, nav, section {
 	background: #900316;
 	padding: 8px;
 	font-weight: 600;
-}
-
-.footer>.bottom>img {
-	width: 20px;
-	position: relative;
-	top: 3px;
-	left: 2px;
-}
-
-img {
-	border-style: none;
 }

@@ -24,7 +24,7 @@
 }
 
 .navbar-nav {
-	display: block;
+	display: contents;
 	list-style-type: disc;
 	margin-block-start: 1em;
 	margin-block-end: 1em;
