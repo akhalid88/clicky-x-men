@@ -11,7 +11,7 @@
     "name": "Jean Grey",
     "image": "https://via.placeholder.com/150",
     "imageWeb": "https://uncannyxmen.net/sites/default/files/images/headshots/p/phoenix4_b.jpg",
-    "imageLocal": "../public/assets/phoenix4_b.jpg"
+    "imageLocal": "../../../public/assets/phoenix4_b.jpg"
   },
   {
     "id": 3,

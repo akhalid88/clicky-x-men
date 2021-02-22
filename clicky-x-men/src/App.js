@@ -11,23 +11,33 @@ class App extends Component {
 
 	//state
 	state = {
-		xmen: xmen
+		xmen: xmen,
+		playDeck: []
 	};
 
-	functions
-	selectImage = id => {
-		alert("You clicked mutant Id #" + id);;
+	// variables and functions
+	shuffleCards = () => {
+		this.state.playDeck = this.state.xmen.sort(() => Math.random() - 0.5);
+		console.log(this.state.playDeck);
 	}
+
+	selectCard = id => {
+		console.log(id);
+	}
+
 	//render
 	render() {
+		this.shuffleCards();
 		return (
 			<Wrapper>
 				<Navbar></Navbar>
 				<Jumbotron></Jumbotron>
 				<div className="container">
-					{this.state.xmen.map(mutant => (
+					{this.state.playDeck.map(mutant => (
 						<Card
+							shuffleCards={this.shuffleCards}
 							id={mutant.id}
+							key={mutant.id}
 							name={mutant.name}
 							image={mutant.imageWeb}
 						/>
