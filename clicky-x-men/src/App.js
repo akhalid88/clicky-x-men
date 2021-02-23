@@ -26,8 +26,8 @@ class App extends Component {
 
 	// variables and functions
 	shuffleCards = () => {
-		const xforce = this.state.xmen.sort(() => Math.random() - 0.5);
-		this.setState({ xmen: xforce });
+		const xmen = this.state.xmen.sort(() => Math.random() - 0.5);
+		this.setState({ xmen: xmen });
 	}
 
 	selectCard = (id) => {

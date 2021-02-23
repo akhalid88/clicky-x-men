@@ -2,76 +2,76 @@
   {
     "id": 1,
     "name": "Cyclops",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/c/cyclops_a.jpg"
+    "image": "./assets/cyclops_a.jpg"
   },
   {
     "id": 2,
     "name": "Jean Grey",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/p/phoenix4_b.jpg"
+    "image": "./assets/phoenix4_b.jpg"
   },
   {
     "id": 3,
     "name": "Beast",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/b/beast_b.jpg"
+    "image": "./assets/beast_b.jpg"
   },
   {
     "id": 4,
     "name": "Iceman",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/i/iceman_b.jpg"
+    "image": "./assets/iceman_b.jpg"
   },
   {
     "id": 5,
     "name": "Angel",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/a/archangel_f.jpg"
+    "image": "./assets/archangel_f.jpg"
   },
   {
     "id": 6,
     "name": "Storm",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/s/storm_c.jpg"
+    "image": "./assets/storm_c.jpg"
   },
   {
     "id": 7,
     "name": "Wolverine",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/w/wolverine_c.jpg"
+    "image": "./assets/wolverine_c.jpg"
   },
   {
     "id": 8,
     "name": "Nightcrawler",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/n/nightcrawler_b.jpg"
+    "image": "./assets/nightcrawler_b.jpg"
   },
   {
     "id": 9,
     "name": "Colossus",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/c/colossus.jpg"
+    "image": "./assets/colossus.jpg"
   },
   {
     "id": 10,
     "name": "Rogue",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/r/rogue_c.jpg"
+    "image": "./assets/rogue_c.jpg"
   },
   {
     "id": 11,
     "name": "Gambit",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/g/gambit.jpg"
+    "image": "./assets/gambit.jpg"
   },
   {
     "id": 12,
     "name": "Shadowcat",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/s/shadowcat.jpg"
+    "image": "./assets/shadowcat.jpg"
   },
   {
     "id": 13,
     "name": "Jubilee",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/j/jubilee_f.jpg"
+    "image": "./assets/jubilee_f.jpg"
   },
   {
     "id": 14,
     "name": "Armor",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/h/hisako.jpg"
+    "image": "./assets/hisako.jpg"
   },
   {
     "id": 15,
     "name": "Emma Frost",
-    "image": "https://uncannyxmen.net/sites/default/files/images/headshots/f/frost_d.jpg"
+    "image": "./assets/frost_d.jpg"
   }
 ]

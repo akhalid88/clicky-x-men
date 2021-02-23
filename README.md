@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# Clicky X-Men  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+###### This readme has been procedurally generated 
+![Main](readme/main.png)
+-----------------------
+## Table of Contents
+1. [Description](#description)
+2. [Deployed link](#deployed-link)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Code snippets](#code-snippets)
+6. [Licenses](#licenses)
+7. [Contributing](#contributing)
+8. [Tests](#tests)
+9. [Questions](#questions)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-----------------------
+## Description
+Apocalypse is coming! How well do you know your fellow mutants. Click on each image once and only once or else Apocalypse will win. The images mutate as you progress, randomizing their position to keep you on your toes.
 
-## Available Scripts
+How many mutants do you know? 
+![Xmen](readme/xmen.png)
 
-In the project directory, you can run:
 
-### `npm start`
+-----------------------
+## Deployed link
+https://akhalid88.github.io/clicky-x-men/
 
+-----------------------
+## Installation
+To install dependencies run the following command:
+```
+npm install
+```
+
+-----------------------
+## Usage
+To use this repo you will need a working knowledge of React.JS . 
+
+To run this tool use the following command in the project directory: 
+
+```
+npm start
+```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Gif](readme/gameplay.gif)
 
-### `npm test`
+-----------------------
+## Code snippets
+The core aspect of React.JS is the *Component*. You can build out multiple *Components* and call them in your *render()* function. Every Component can only return a single root element. This informs how we code out a web page. In the code below, <**Wrapper**> contains all the other Components that we call such as **Navbar**, **Jumbotron**, **Card**, and **Footer**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Anytime props (React version of parameters) are sent, a unique key identifier needs to be also sent along with them to help React identify the individual **Components**. For the Navbar, we sent `key={this.currentScore}` and for the Cards, we sent `key={mutant.id}` as the unique identifier.
 
-### `npm run build`
+```javascript
+render() {
+	return (
+		<Wrapper>
+			<Navbar
+				key={this.currentScore}
+				currentScore={this.state.currentScore}
+				topScore={this.state.topScore}
+				guess={this.state.guess}
+			/>
+			<Jumbotron />
+			<div className="container">
+				{this.state.xmen.map(mutant => (
+					<Card
+						selectCard={this.selectCard}
+						id={mutant.id}
+						key={mutant.id}
+						name={mutant.name}
+						image={mutant.image}
+						animate={this.state.animate}
+					/>
+				))}
+			</div>
+			<Footer />
+		</Wrapper>
+	);
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Upon the user selecting a card, we check to see if the id of the card selected matches any of the cards previously selected in the `selectedCards` array. If the id is in the array it will return a value greater than -1 and we then reset the state of the game to the starting defaults and provide some user feedback in a game over message and a css animation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Id the index of the id returns a -1, that means that card has not been selected yet and we continue on with updating the game state by increasing the score, providing the feedback in a message and in the case that the player lost on the last round, reset the animate key to blank.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+```javascript
+if (this.state.selectedCards.indexOf(id) > -1) {
+	// reset selectedCards and score
+	this.setState({
+		selectedCards: [],
+		currentScore: 0,
+		animate: "animate__wobble",
+		guess: "Game Over: You have failed miserably!"
+	});
+} else {
+	//increase current score by 1
+	this.setState({
+		currentScore: this.state.currentScore + 1,
+		guess: "+1 Your x-gene is strong!",
+		animate: ''
+	})
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-----------------------
+## Licenses
+This project uses a [MIT License](https://opensource.org/licenses/MIT). 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-----------------------
+## Contributing
+If you would like to contribute, you will need to know React.JS Javascript.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-----------------------
+## Built With
 
-## Learn More
+- React.JS
+- Bootstrap
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-----------------------
+## Questions
+Created by Muhammad A Khalid
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you have any questions you can reach me at the following email: [akhalid.code@gmail.com](mailto:akhalid.code@gmail.com)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Follow my other work at GitHub: https://github.com/akhalid88/
