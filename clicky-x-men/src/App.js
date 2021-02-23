@@ -14,8 +14,8 @@ class App extends Component {
 	state = {
 		xmen: xmen,
 		selectedCards: [],
-		currentScore: 0,
-		maxScore: 0
+		currentScore: 1,
+		topScore: 0
 	};
 
 	componentDidMount() {
@@ -29,32 +29,38 @@ class App extends Component {
 	}
 
 	selectCard = (id) => {
-
-
-
-		for (var i = 0; i < this.state.selectedCards.length; i++) {
-			if (id == this.state.selectedCards[i]) {
-				//display failure
-				//reload page
-				console.log("Hello");
-			} else {
-				this.setState({ currentScore: this.state.currentScore + 1 })
-				console.log("Score:" + this.state.currentScore);
+		if (this.state.selectedCards.indexOf(id) > -1) {
+			// for (var i = 0; i < this.state.selectedCards.length; i++) {
+			// if (id == this.state.selectedCards[i]) {
+			//display failure
+			//reload page
+			console.log("You Lose to the Flatscans");
+			this.setState({ selectedCards: [] });
+			this.setState({ currentScore: 0 });
+		} else {
+			this.setState({ currentScore: this.state.currentScore + 1 })
+			if (this.state.currentScore > this.state.topScore) {
+				this.setState({ topScore: this.state.currentScore });
 			}
+			this.state.selectedCards.push(id);
+			console.log(this.state.selectedCards);
+			console.log("Score:" + this.state.currentScore);
 		}
-
-		this.state.selectedCards.push(id);
-		console.log("Image: " + this.state.selectedCards);
 		this.shuffleCards();
 	}
+
 
 
 	//render
 	render() {
 		return (
 			<Wrapper>
-				<Navbar></Navbar>
-				<Jumbotron></Jumbotron>
+				<Navbar
+					key={this.currentScore}
+					currentScore={this.currentScore}
+					topScore={this.topScore}
+				/>
+				<Jumbotron />
 				<div className="container">
 					{this.state.xmen.map(mutant => (
 						<Card
@@ -67,7 +73,7 @@ class App extends Component {
 						/>
 					))}
 				</div>
-				<Footer></Footer>
+				<Footer />
 			</Wrapper>
 		);
 	}

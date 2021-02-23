@@ -1,9 +1,3 @@
-/* * {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	font-family: sans-serif;
-} */
-
 .navbar {
 	background: #900316;
 	/* min-height: 70px; */
@@ -48,6 +42,6 @@ li {
 	align-content:space-around;
 }
 
-.score {
+/* .score {
 	text-align: right;
-}
+} */
