@@ -2,76 +2,76 @@
   {
     "id": 1,
     "name": "Cyclops",
-    "image": "/assets/cyclops_a.jpg"
+    "image": "./assets/cyclops_a.jpg"
   },
   {
     "id": 2,
     "name": "Jean Grey",
-    "image": "/assets/phoenix4_b.jpg"
+    "image": "./assets/phoenix4_b.jpg"
   },
   {
     "id": 3,
     "name": "Beast",
-    "image": "/assets/beast_b.jpg"
+    "image": "./assets/beast_b.jpg"
   },
   {
     "id": 4,
     "name": "Iceman",
-    "image": "/assets/iceman_b.jpg"
+    "image": "./assets/iceman_b.jpg"
   },
   {
     "id": 5,
     "name": "Angel",
-    "image": "/assets/archangel_f.jpg"
+    "image": "./assets/archangel_f.jpg"
   },
   {
     "id": 6,
     "name": "Storm",
-    "image": "/assets/storm_c.jpg"
+    "image": "./assets/storm_c.jpg"
   },
   {
     "id": 7,
     "name": "Wolverine",
-    "image": "/assets/wolverine_c.jpg"
+    "image": "./assets/wolverine_c.jpg"
   },
   {
     "id": 8,
     "name": "Nightcrawler",
-    "image": "/assets/nightcrawler_b.jpg"
+    "image": "./assets/nightcrawler_b.jpg"
   },
   {
     "id": 9,
     "name": "Colossus",
-    "image": "/assets/colossus.jpg"
+    "image": "./assets/colossus.jpg"
   },
   {
     "id": 10,
     "name": "Rogue",
-    "image": "/assets/rogue_c.jpg"
+    "image": "./assets/rogue_c.jpg"
   },
   {
     "id": 11,
     "name": "Gambit",
-    "image": "/assets/gambit.jpg"
+    "image": "./assets/gambit.jpg"
   },
   {
     "id": 12,
     "name": "Shadowcat",
-    "image": "/assets/shadowcat.jpg"
+    "image": "./assets/shadowcat.jpg"
   },
   {
     "id": 13,
     "name": "Jubilee",
-    "image": "/assets/jubilee_f.jpg"
+    "image": "./assets/jubilee_f.jpg"
   },
   {
     "id": 14,
     "name": "Armor",
-    "image": "/assets/hisako.jpg"
+    "image": "./assets/hisako.jpg"
   },
   {
     "id": 15,
     "name": "Emma Frost",
-    "image": "/assets/frost_d.jpg"
+    "image": "./assets/frost_d.jpg"
   }
 ]
