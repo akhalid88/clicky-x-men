@@ -26,17 +26,12 @@ class App extends Component {
 
 	// variables and functions
 	shuffleCards = () => {
-		const xmen = this.state.xmen.sort(() => Math.random() - 0.5);
-		this.setState({ xmen: xmen });
+		const xforce = this.state.xmen.sort(() => Math.random() - 0.5);
+		this.setState({ xmen: xforce });
 	}
 
 	selectCard = (id) => {
 		if (this.state.selectedCards.indexOf(id) > -1) {
-			// for (var i = 0; i < this.state.selectedCards.length; i++) {
-			// if (id == this.state.selectedCards[i]) {
-			//display failure
-			//reload page
-			console.log("You Lose to the Flatscans");
 			// reset selectedCards and score
 			this.setState({
 				selectedCards: [],
@@ -44,23 +39,18 @@ class App extends Component {
 				animate: "animate__wobble",
 				guess: "You have failed miserably!"
 			});
-			// this.setState({ currentScore: 0 });
-			// this.setState({ animate: "animate__headShake" })
 		} else {
 			//increase current score by 1
 			this.setState({
 				currentScore: this.state.currentScore + 1,
-				guess: "You rock"
+				guess: "Your x-gene is strong",
+				animate: ''
 			})
-			//if currentScore is higher than topScore, set topScore
-			// console.log(this.state.currentScore);
-			// console.log(this.state.topScore);
+
 			if (this.state.currentScore >= this.state.topScore) {
 				this.setState({ topScore: this.state.currentScore + 1 });
 			}
 			this.state.selectedCards.push(id);
-			// console.log(this.state.selectedCards);
-			// console.log("Score:" + this.state.currentScore);
 		}
 		this.shuffleCards();
 	}
@@ -79,7 +69,6 @@ class App extends Component {
 				<div className="container">
 					{this.state.xmen.map(mutant => (
 						<Card
-							// shuffleCards={this.shuffleCards}
 							selectCard={this.selectCard}
 							id={mutant.id}
 							key={mutant.id}

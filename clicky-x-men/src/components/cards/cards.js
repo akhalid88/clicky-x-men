@@ -9,9 +9,4 @@ function Card(props) {
 	)
 }
 
-// animate__shakeX
-
-// animate__bounce
-
-// {`${props.animate} ? "animate__shakeX" : ""`}
 export default Card;
