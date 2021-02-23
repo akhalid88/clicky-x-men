@@ -14,8 +14,10 @@ class App extends Component {
 	state = {
 		xmen: xmen,
 		selectedCards: [],
-		currentScore: 1,
-		topScore: 0
+		currentScore: 0,
+		topScore: 0,
+		animate: '',
+		guess: "Click an image to mutate!"
 	};
 
 	componentDidMount() {
@@ -35,21 +37,33 @@ class App extends Component {
 			//display failure
 			//reload page
 			console.log("You Lose to the Flatscans");
-			this.setState({ selectedCards: [] });
-			this.setState({ currentScore: 0 });
+			// reset selectedCards and score
+			this.setState({
+				selectedCards: [],
+				currentScore: 0,
+				animate: "animate__wobble",
+				guess: "You have failed miserably!"
+			});
+			// this.setState({ currentScore: 0 });
+			// this.setState({ animate: "animate__headShake" })
 		} else {
-			this.setState({ currentScore: this.state.currentScore + 1 })
-			if (this.state.currentScore > this.state.topScore) {
-				this.setState({ topScore: this.state.currentScore });
+			//increase current score by 1
+			this.setState({
+				currentScore: this.state.currentScore + 1,
+				guess: "You rock"
+			})
+			//if currentScore is higher than topScore, set topScore
+			// console.log(this.state.currentScore);
+			// console.log(this.state.topScore);
+			if (this.state.currentScore >= this.state.topScore) {
+				this.setState({ topScore: this.state.currentScore + 1 });
 			}
 			this.state.selectedCards.push(id);
-			console.log(this.state.selectedCards);
-			console.log("Score:" + this.state.currentScore);
+			// console.log(this.state.selectedCards);
+			// console.log("Score:" + this.state.currentScore);
 		}
 		this.shuffleCards();
 	}
-
-
 
 	//render
 	render() {
@@ -57,19 +71,21 @@ class App extends Component {
 			<Wrapper>
 				<Navbar
 					key={this.currentScore}
-					currentScore={this.currentScore}
-					topScore={this.topScore}
+					currentScore={this.state.currentScore}
+					topScore={this.state.topScore}
+					guess={this.state.guess}
 				/>
 				<Jumbotron />
 				<div className="container">
 					{this.state.xmen.map(mutant => (
 						<Card
-							shuffleCards={this.shuffleCards}
+							// shuffleCards={this.shuffleCards}
 							selectCard={this.selectCard}
 							id={mutant.id}
 							key={mutant.id}
 							name={mutant.name}
 							image={mutant.image}
+							animate={this.state.animate}
 						/>
 					))}
 				</div>
